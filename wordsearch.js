@@ -1,22 +1,22 @@
-const arrange = function (matrix) {
+const arrange = function(matrix) {
 
-  var newArray = [];
+  let newArray = [];
+  let counter = 0;
   for (let i = 0; i < matrix[0].length; i++) {
-      newArray[i] = [];
-      counter = 0;
-      while (counter !== matrix.length) {
-          newArray[i].push(matrix[counter][i]);
-          counter++;
-      }
+    newArray[i] = [];
+    while (counter !== matrix.length) {
+      newArray[i].push(matrix[counter][i]);
+      counter++;
+    }
   }
   return newArray;
 };
 
 const findWord = function(strings, word) {
   for (let letter of strings) {
-      if (letter.includes(word)) {
-          return true;
-      }
+    if (letter.includes(word)) {
+      return true;
+    }
   }
 };
 
@@ -28,9 +28,9 @@ const wordSearch = (letters, word) => {
   const reverseJoin = letters.map(ls=>ls.reverse().join(''));
   
   if (findWord(verticalJoin, word) || findWord(horizontalJoin, word) || findWord(reverseJoin, word)) {
-      return true;
+    return true;
   } else {
-      return false;
+    return false;
   }
 };
 
