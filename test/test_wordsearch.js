@@ -45,7 +45,7 @@ describe("#wordSearch()", function() {
     assert.isTrue(result);
   });
   it("should return false if the array is empty", function() {
-    const result = wordSearch([], 'EMPTY')
+    const result = wordSearch([], 'EMPTY');
     assert.isFalse(result);
   });
   it("should return false if word is an empty string", function() {
@@ -59,7 +59,7 @@ describe("#wordSearch()", function() {
       ['U', 'B', 'T', 'W', 'A', 'P', 'A', 'I'],
       ['O', 'D', 'C', 'A', 'K', 'U', 'A', 'S'],
       ['E', 'Z', 'K', 'F', 'Q', 'U', 'A', 'L'],
-    ], '')
+    ], '');
     assert.isFalse(result);
   });
 });
